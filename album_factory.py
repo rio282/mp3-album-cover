@@ -19,7 +19,7 @@ def make(mp3_filepath: str, cover_image_filepath: str) -> bool:
 
         # set & save cover image to mp3 file
         audio_file.tag.images.set(ImageFrame.FRONT_COVER, cover_image_bytes, mimetype)
-        audio_file.tag.save(version=eyed3.id3.ID3_V2_3)
+        audio_file.tag.save(version=eyed3.id3.ID3_V2_4)
 
         return True
     except FileNotFoundError:
